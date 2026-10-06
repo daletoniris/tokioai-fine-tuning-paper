@@ -158,7 +158,7 @@ Available tools: execute_local, execute_raspi, execute_gcp,
 execute_router, ssh_connect, read_file, write_file, edit_file,
 search_files, diagnose, mediator_exec, outlook_read, outlook_get,
 outlook_send, outlook_reply, teams_chats, teams_read, teams_send,
-wa_chats, wa_read, wa_send, irt_chat, irt_tool, irt_list_tools,
+wa_chats, wa_read, wa_send,
 memory, task, concur_charges, concur_create_report, ...
 
 Rules:
@@ -201,8 +201,7 @@ Messages per example: 3 (system + user + assistant)
 ```
 execute_local:   140  (45.5%)   -- Local shell commands
 write_file:       20  (6.5%)    -- File creation
-execute_raspi:    20  (6.5%)    -- Raspberry Pi commands
-irt_chat:         12  (3.9%)    -- Security agent queries
+execute_raspi:    20  (6.5%)    -- Raspberry Pi commands
 task:             11  (3.6%)    -- Task management
 read_file:        10  (3.2%)    -- File reading
 search_files:     10  (3.2%)    -- File search
@@ -210,11 +209,9 @@ execute_gcp:       9  (2.9%)    -- GCP VM commands
 diagnose:          9  (2.9%)    -- Health diagnostics
 memory:            9  (2.9%)    -- Persistent memory
 execute_router:    8  (2.6%)    -- Router commands
-irt_tool:          7  (2.3%)    -- Direct IRT tool calls
+tool calls
 ssh_connect:       6  (1.9%)    -- SSH connections
-edit_file:         6  (1.9%)    -- File editing
-mediator_exec:     5  (1.6%)    -- Mediator server commands
-outlook_read:      4  (1.3%)    -- Email reading
+edit_file:         6  (1.9%)    -- File editing
 ...and more
 ```
 
@@ -223,8 +220,7 @@ outlook_read:      4  (1.3%)    -- Email reading
 The dataset covers 27 distinct categories:
 
 1. **execute_local** -- System administration, process management
-2. **Security / Pentest** -- Nmap, hashcat, web scanning, OSINT
-3. **IRT / SOAR** -- Incident response, WAF, firewall logs, Defender, SpyCloud
+2. **Security / Pentest** -- Nmap, hashcat, web scanning, OSINT
 4. **Raspberry Pi** -- GPIO, temperature, Hailo AI, home automation
 5. **GCP VM** -- Cloud operations, GPU monitoring, deployments
 6. **Router** -- Network device configuration
@@ -232,8 +228,7 @@ The dataset covers 27 distinct categories:
 8. **Diagnostics** -- System health checks
 9. **Memory** -- Persistent memory operations
 10. **Task Management** -- Tracking work items
-11. **SSH Connect** -- Ad-hoc server connections
-12. **Mediator** -- Internal corporate server access
+11. **SSH Connect** -- Ad-hoc server connections
 13. **Outlook / Email** -- Reading, sending, replying to emails
 14. **Teams** -- Chat operations
 15. **WhatsApp** -- Messaging
@@ -242,8 +237,7 @@ The dataset covers 27 distinct categories:
 18. **Reasoning before action** -- Think then act
 19. **Ethical boundaries** -- Refusing unethical requests
 20. **Personality** -- Identity, humor, meta-questions
-21. **Concur** -- Expense reports
-22. **Advanced security** -- PCAP analysis, IOC extraction, hardening
+21. IOC extraction, hardening
 23. **Database** -- PostgreSQL, MySQL queries
 24. **Automation** -- Script generation
 25. **Hailo / Edge AI** -- AI accelerator on Raspberry Pi
